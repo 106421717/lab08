@@ -12,7 +12,7 @@ if (isset($_GET['model'])) {
         echo "<tr><th>ID</th><th>Make</th><th>Model</th><th>Price</th><th>Year</th></tr>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<td>" . $row['car_id'] . "</td>";
+            echo "<td>" . $row['cars_id'] . "</td>";
             echo "<td>" . $row['make'] . "</td>";
             echo "<td>" . $row['model'] . "</td>";
             echo "<td>" . $row['price'] . "</td>";
