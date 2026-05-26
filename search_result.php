@@ -1,4 +1,7 @@
 <?php
+require_once "settings.php";
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+
 if (isset($_GET['model'])) {
     $model = mysqli_real_escape_string($conn, $_GET['model']);
     $sql = "SELECT * FROM `cars` WHERE model like '%$model%'";
