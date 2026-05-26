@@ -1,9 +1,9 @@
 <?php
     require_once "settings.php";
-    $dbconn = @mysqli_connect ($host,$user,$pwd,$sql_db);
+    $conn = @mysqli_connect ($host,$user,$pwd,$sql_db);
     if ($dbconn) {
         $query = "SELECT * FROM cars";
-        $result = mysqli_query($dbconn,$query);
+        $result = mysqli_query($conn,$query);
         if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
